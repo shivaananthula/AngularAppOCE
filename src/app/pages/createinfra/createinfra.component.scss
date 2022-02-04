@@ -1,0 +1,30 @@
+body {
+    padding-top: 20px;
+  }
+  .spacer {
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }      
+  .block {
+    height: 500px;
+    padding-top: 5px;  
+  }  
+  .block2 {
+    min-height: 160px;
+    padding-top: 5px; 
+  } 
+  .center {
+    position: absolute;
+  /*  top: 0;
+    bottom: 0; */
+    left: 0;
+    right: 0;
+    margin: auto;  
+  }
+  .container{
+    max-width: 500px;
+  }
+
+  .createBtn{
+    margin-left: 20%;
+  }

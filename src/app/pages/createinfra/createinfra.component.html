@@ -1,0 +1,82 @@
+<!-- 
+<nav class="navbar navbar-inverse navbar-fixed-top ">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand " href="#">OCE</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#">Welcome</a></li>
+
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="/searchrequest">Search-Request</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/logout">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav> -->
+
+  <div class="container">
+    <div class="row control-row">
+        <div class="col-lg-12"><label>CRIMS options: </label>
+            <select class="form-control" [(ngModel)]="newEnv.crims">
+                <option *ngFor="let option of crimsOptions" value="{{option}}">{{option}}</option>
+            </select>
+        </div>
+    </div>
+    <div class ="row control-row">
+        <div class= "col-lg-12"><label>CRIMS Version: </label>
+            <input class="form-control" type="text" [(ngModel)]="newEnv.crims_version" name="crims_version" />
+            <p class="help-block">Release, Development etc.</p>
+        </div>
+    </div>
+    <div class="row control-row">
+        <div class= "col-lg-12"><label>OS Type: </label>
+            <select class="form-control" [(ngModel)]="newEnv.os_type">
+                <option *ngFor="let type of OsType" value="{{type}}">{{type}}</option>
+            </select>
+        </div>
+    </div>
+    <div class ="row control-row">
+        <div class= "col-lg-12"><label>OS Version: </label>
+            <input class="form-control" type="text" [(ngModel)]="newEnv.os_version" name="os_version" />
+            <p class="help-block">Debian, Ubuntu etc.</p>
+        </div>
+    </div>
+    <div class="row control-row">
+        <div class= "col-lg-12"><label>DB Type: </label>
+            <select class="form-control" [(ngModel)]="newEnv.db_type">
+                <option *ngFor="let type of DbType" value="{{type}}">{{type}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row control-row">
+        <div class= "col-lg-12"><label>DB Restore Options: </label>
+            <select class="form-control" [(ngModel)]="newEnv.db_restore">
+                <option *ngFor="let type of DbRestoreOptions" value="{{type}}">{{type}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row" *ngIf="newEnvError != ''">
+        <div class="col-lg-12"><div class="alert alert-danger" role="alert">
+            {{newEnvError}}
+          </div></div>
+    </div>
+    <br>
+    <div class="row control-row">  
+        <div class= "col-lg-12"><label>Proceed To ? </label>
+            <button type="button" class="btn btn-primary createBtn" (click)="onCreateClicked()">Create Infra</button>
+        </div>
+    </div>
+    
+
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>

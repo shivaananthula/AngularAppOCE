@@ -1,0 +1,23 @@
+<div class="container">
+        
+  <div class="row col-xs-6 block2 primary center">
+      
+
+
+         <input type="search" name="req_id" id="req_id" class="form-control rounded" [(ngModel)]="req_Id"  placeholder="Enter request ID" aria-label="Search" aria-describedby="search-addon" required />
+         <br/> 
+        
+
+         <div *ngIf="eventErr!=''" style="color: red;">No Data Found!</div>
+         <br/>
+
+  <div>
+      <div class="row control-row">
+        <div class= "col-lg-12">
+            <button type="button" class="btn btn-primary btn-md searchBtn" (click)="onSearch()">Search</button>
+        </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</div>
